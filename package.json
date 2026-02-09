@@ -1,0 +1,11 @@
+{
+  "name": "@hydrooj/export-solution-download",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.ts",
+  "license": "MIT",
+  "hydro": {
+    "cli": false
+  }
+}
+
