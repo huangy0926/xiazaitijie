@@ -66,39 +66,7 @@ git pull
 pm2 restart hydrooj
 ```
 
-### 方式 A：启用到 8888（一键安装版，通常是 root + pm2）
 
-1. 将插件目录放在机器上任意路径（示例）：
-
-```
-/mnt/d/hydro/Hydro-master/Hydro-master/plugins/export-solution-download
-```
-
-2. 编辑 `/root/.hydro/addon.json`，加入插件路径（数组里追加一项）：
-
-```json
-[
-  "@hydrooj/ui-default",
-  "@hydrooj/hydrojudge",
-  "@hydrooj/fps-importer",
-  "@hydrooj/a11y",
-  "/mnt/d/hydro/Hydro-master/Hydro-master/plugins/export-solution-download"
-]
-```
-
-3. 重启：
-
-```bash
-pm2 restart hydrooj
-```
-
-### 方式 B：启用到 dev 实例（例如 8889）
-
-编辑你的 dev profile：
-
-- `~/.hydro/profiles/dev/addon.json`
-
-加入插件路径（数组里追加一项），然后重启 dev 服务进程即可。
 
 ## 验证
 
@@ -112,4 +80,5 @@ pm2 restart hydrooj
   - 文件：`index.ts`
 - 前端：监听 `problemset/download` 事件，把题解追加到 zip targets
   - 文件：`frontend/problemset_download.page.ts`
+
 
